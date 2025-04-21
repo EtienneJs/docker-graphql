@@ -26,8 +26,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t nekoscript/docker-graphql:0.0.2 .
+        docker build -t nekoscript/docker-graphql .
     - name: Push Docker image
       run: |
         docker push nekoscript/docker-graphql:0.0.2
+        docker push nekoscript/docker-graphql
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
